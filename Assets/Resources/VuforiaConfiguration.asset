@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,15 +13,17 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AVwZdxb/////AAABGYjfjG231EPpuV1d1tRm7wUGCpGRA6vTeLOwQXiNdOuTR5FkJYa+yorkEeDXJl+7iLf9+w7lnu9tYLW3xX+9RLYWpioPIrObkUb7PmhMePLCXAKqzAXqUjeS8J2RCX86a5weK+i3DvfVA7kegAkRlbmYeblvVn9MOKIiKiUEMwm5spXMk+JKlXHYFIqaQsDNlgwiRr4C5UICmBf/YQSevoPMqz+ujljXNR0E0GIbjO3qzGJTPgWpIrKvls+2v2XtCv0dDU+Sjx6fFYj51u7vNgf3GqDcDXRRVh/eNvAIm/mqwN97aSBGNxfef7P/vAHTaoZbcjpTSg4HbqYK+7zFE8UlJhJeRBz/EIO8sYF2uvq0
+    vuforiaLicenseKey: AdO+fgr/////AAABmbBdYDGxXE9ahXaquwMLbBk+LK3JExfMgOnUjTk//jFHPHtcUwroH1FcYJOUSrBrJOrsztWirrX6L5c0Ubi/l6rxcEJFItPnm632dVmO54IivFGvlqG6Bfxr+RifxQR8vxmCfA7285JFiwgjsm5S4Q4qhZwK4M/Ncf84MNdifcstR1/Pj9VB7bwZiLA/d2yyHd2zhzFBl4su7ntlcXAgckla/TTdaKGrzWgVQ9yqj/JQ8ttlztZL+kZgaqbrcMkLIazn/g1GVJzgvxesy59Bu8Tn66Uszgts7luJfZRzAOvFLblH0Gh8O5Rljo3BIMPcPs/9gZA+XqHrCii8N8wVJSmKd8MLAQcAhg+SCOXx1wNw
     ufoLicenseKey: QVF6MCtxSC8vLy8vQUFBQUtDU01MamY3UVVLL2kyVVNDejV0NUlJTmtxY2pyTmtNblZteUtLMXp0Wi9MNHVCcVVvQnNZUTY5UEVFSStIeEx6NHJoRXo4SnY4cmxNMmRwRnFYZnljMGNRY2pNN1B2Ymp0bzNVbmNXUnVmZXgrL1VHTnRuTEhCTVpFRXFFNmJzcUozbEZGUFYrTzIwRTF5RDA4MXUra25sK0RLUFpsMUJQUWFjQzhBOE1QRzNJNnVRYjBLREE3K2QvQTVjYWlpMEkrN1ZTaE8yL2l0ZTZCZTh1V3lrSzhRdTBYMlczRDk0Ym45aWlna3hKN3lHYmNGQlVsOHJrWndqdDlJUVJOVWxmLzZ5STVuUnRZVG1qTkcxWUFTTENhQ290dkJVSThjendRcFBaWHBIdG16UWx4ZzE2MUtiVFphVkNEbi9xU2NkSUJ6bVRreG8vYmJhbWsxSmUraHJWZUNmV08wVTRjblZkZGpHcHUrMUdidVE=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
-    useDelayedLoadingObjectTargets: 0
+    useDelayedLoadingObjectTargets: 1
     cameraDirection: 0
     mirrorVideoBackground: 0
+    version: 8.0.10
+    eulaAcceptedVersions: '{"Values":["7.1","7.5","7.2","8.0"]}'
   digitalEyewear:
     cameraOffset: 0.06
     distortionRenderingLayer: 31
@@ -45,8 +48,8 @@ MonoBehaviour:
   videoBackground:
     clippingMode: 0
     numDivisions: 2
-    videoBackgroundShader: {fileID: 15311, guid: 0000000000000000f000000000000000,
-      type: 0}
+    videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
+      type: 3}
     matteShader: {fileID: 15310, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:

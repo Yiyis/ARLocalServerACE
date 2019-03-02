@@ -5,22 +5,24 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class button : MonoBehaviour {
-    private const string URL = "http://192.168.4.1/servo";
+  //  private const string URL = "http://192.168.4.1/servo";
 	public Text responseText;
 
-	public void Request()
+	public void ServoRequest()
 	{ 
-		StartCoroutine (Upload());
+		StartCoroutine (UploadServo());
 	
 	}
+    public void LEDRequest()
+    {
+        StartCoroutine(UploadLED());
 
+    }
 
-	private IEnumerator Upload()
+	private IEnumerator UploadServo()
 	{
-		//WWWForm form = new WWWForm();
-        //form.AddField("/servo", "toggleServo");
-
-		UnityWebRequest www = UnityWebRequest.Post((URL), "toggleServo");
+        
+        UnityWebRequest www = UnityWebRequest.Post(("http://192.168.4.1/servo"), "toggleServo");
 		www.chunkedTransfer = false;////ADD THIS LINE
 		yield return www.SendWebRequest();
 
@@ -34,4 +36,22 @@ public class button : MonoBehaviour {
         }
 
 	}
+
+    private IEnumerator UploadLED()
+    {
+
+        UnityWebRequest www = UnityWebRequest.Post(("http://192.168.4.1/led"), "toggleLED");
+        www.chunkedTransfer = false;////ADD THIS LINE
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.Log(www.error);
+        }
+        else
+        {
+            Debug.Log("Form upload complete!");
+        }
+
+    }
 }
