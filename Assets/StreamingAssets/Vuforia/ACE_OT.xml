@@ -2,5 +2,6 @@
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
   <Tracking>
     <ObjectTarget name="featherboard" />
+    <ObjectTarget name="cup" />
   </Tracking>
 </QCARConfig>
