@@ -53,14 +53,14 @@ public class ReadStream : MonoBehaviour
 				stream += block;
 
 				string[] data = stream.Split(new string[] { "\n\n" }, System.StringSplitOptions.None);
-				//Debug.Log ("Data length: " + data.Length);
+				Debug.Log ("Data length: " + data.Length);
 				stream = data[data.Length - 1];
 
 				for (int i = 0; i < data.Length - 1; i++)
 				{
 					if (!string.IsNullOrEmpty(data[i]))
 					{
-						//	Debug.Log ("Data: " + data [i]); // print all block of data (event + data)
+							Debug.Log ("Data: " + data [i]); // print all block of data (event + data)
 
 						if (data [i].Contains ("light_brightness")) {
 							temperatureTrue = true;
@@ -70,7 +70,7 @@ public class ReadStream : MonoBehaviour
 							humidityTrue = true;
 							string output = data [i].Substring(data [i].IndexOf("{"));
 							parseDataTemperature = JsonUtility.FromJson<DataClassTemperature> (output);
-							//Debug.Log ("Data of waterlevel sensor: " + data [i]);
+							Debug.Log ("Data of waterlevel sensor: " + data [i]);
 
 						}
 						if (temperatureTrue) {

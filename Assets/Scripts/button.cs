@@ -8,32 +8,16 @@ public class button : MonoBehaviour {
   //  private const string URL = "http://192.168.4.1/servo";
 	public Text responseText;
 
-    //void Start(){
-    //    GameObject.Find("AvatarStatesUI1").SetActive(false);
-    //    GameObject.Find("AvatarStatesUI2").SetActive(false);
-    //}
-
 	public void ServoRequest()
 	{ 
 		StartCoroutine (UploadServo());
 	
 	}
-
     public void LEDRequest()
     {
         StartCoroutine(UploadLED());
 
     }
-
-    //public void ShowAvatarStateUI1(){
-    //    GameObject.Find("AvatarStatesUI1").SetActive(true);
-    //    Debug.Log("Click1");
-    //}
-    //public void ShowAvatarStateUI2()
-    //{
-    //    GameObject.Find("AvatarStatesUI2").SetActive(true);
-    //    Debug.Log("Click2");
-    //}
 
 	private IEnumerator UploadServo()
 	{

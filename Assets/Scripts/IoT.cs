@@ -8,7 +8,7 @@ public class IoT : MonoBehaviour, ITrackableEventHandler {
 	public GameObject imageTarget;
 	private TrackableBehaviour mTrackableBehaviour;
 	private bool targetFound = false;
-	public GameObject hide;
+//	public GameObject hide;
 	string value;	
 	public Text timeText;
 	public string timeTextVal;
@@ -93,7 +93,7 @@ public class IoT : MonoBehaviour, ITrackableEventHandler {
 
 	void Update () {
 		if (targetFound) {
-			hide.SetActive (true);
+			//hide.SetActive (true);
 			if (Input.GetKeyDown (KeyCode.Escape)) {
 				Application.Quit (); // exit app if back/esc button is pressed
 			}
@@ -103,8 +103,8 @@ public class IoT : MonoBehaviour, ITrackableEventHandler {
 				LightSensorValue = microTemperatureVal;
 			    //Debug.Log ("Data of light intensity sensor: " + (LightSensorValue/100));
 				checkTemperature ();
-				//microHumidityText.text = microHumidityVal.ToString ();
-				//checkHumidity ();
+				microHumidityText.text = microHumidityVal.ToString ();
+				checkHumidity ();
 				//microPhotoresistorText.text = microPhotoresistorVal.ToString ();
 				//checkPhotoresistor ();
 				//checkMotion ();
@@ -134,7 +134,7 @@ public class IoT : MonoBehaviour, ITrackableEventHandler {
 			}
 
 		if (!targetFound) {
-			hide.SetActive (false);
+			//hide.SetActive (false);
 		}
 	}
 
